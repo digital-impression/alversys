@@ -1,0 +1,14 @@
+# Netlify / Cloudflare Pages redirect map.
+# The old Wix site used different paths; 301 them so existing links and
+# search-engine rankings survive the move.
+
+/biografieliesbet              /liesbet-jacobs.html            301
+/biografiemichelle             /michelle-damen.html            301
+/burgerlijkrecht               /burgerlijk-recht.html          301
+/faillissementen               /faillissementen.html           301
+/schulden                      /schulden.html                  301
+/familierecht                  /familierecht.html              301
+/contact                       /contact.html                   301
+/over-ons                      /over-ons.html                  301
+/privacyencookieverklaring     /privacy-en-cookiebeleid.html   301
+/privacy-en-cookieverklaring   /privacy-en-cookiebeleid.html   301

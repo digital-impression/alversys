@@ -13,6 +13,7 @@ another developer — delete this script and edit the generated .html directly.
 The site does not need it to run.
 """
 
+import datetime
 import os
 import re
 
@@ -27,7 +28,10 @@ TEL_HREF = "+3238449500"
 MAIL_L = "liesbet.jacobs@jacobs-law.be"
 MAIL_M = "michelle.damen@jacobs-law.be"
 INSTA = "https://www.instagram.com/jacobs_lawfirm/"
-VAT = "BE 0669.531.513"
+# Confirmed against the KBO/BCE register: Jacobs Law, Besloten Vennootschap,
+# ondernemingsnummer 0669.531.513, btw-plichtig sinds 12 januari 2017,
+# zetel Populierenlaan 43, 2630 Aartselaar, NACE 69.101 (activiteiten van advocaten).
+VAT = "BTW BE 0669.531.513"
 
 # --------------------------------------------------------------------------
 # Icon vocabulary
@@ -247,7 +251,7 @@ FOOTER = """<footer class="footer">
       </div>
 
       <div class="footer__bottom">
-        <p style="margin:0">&copy; <span id="year">2026</span> Jacobs Law BV &middot; {vat}</p>
+        <p style="margin:0">&copy; <span id="year">{year}</span> Jacobs Law BV &middot; {vat}</p>
         <ul class="footer__legal">
           <li><a href="privacy-en-cookiebeleid.html">Privacy- en cookiebeleid</a></li>
           <li><a href="contact.html#klachten">Klachtenregeling</a></li>
@@ -257,6 +261,7 @@ FOOTER = """<footer class="footer">
   </footer>""".format(
     logo=LOGO, insta=INSTA, ig=ICON_INSTA, ml=ICON_MAIL, tl=ICON_TEL,
     mail=MAIL_L, telh=TEL_HREF, teld=TEL_DISPLAY, street=STREET, city=CITY, vat=VAT,
+    year=datetime.date.today().year,
     domain_links="".join('<li><a href="{}.html">{}</a></li>'.format(d[0], d[1]) for d in DOMAINS),
 )
 
@@ -310,7 +315,6 @@ def page(slug, title, description, body, active=None, ink_hero=False, schema="")
   </main>
   {footer}
   <script src="assets/js/site.js" defer></script>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
 """.format(title=title, description=description, canonical=canonical, site=SITE,
@@ -744,7 +748,7 @@ def bio_page(name, role, portrait, focus, lead, prose, facts, mail, other_slug,
             <div class="framed" style="margin-bottom:2.5rem">
               <img src="assets/img/{portrait}" width="1200" height="1500" loading="lazy"
                    decoding="async" class="{focus}"
-                   style="aspect-ratio:4/4.9;object-fit:cover" alt="Portret van {name}.">
+                   style="aspect-ratio:4/5;object-fit:cover" alt="Portret van {name}.">
             </div>
             <p class="person__role" style="margin-bottom:.75rem">{role}</p>
             <p style="font-size:.9375rem;color:var(--fg-muted);margin-bottom:1.5rem">
@@ -1286,8 +1290,8 @@ TARIEVEN = pagehead(
                 <dd><strong>&euro;110</strong> incl. btw</dd>
               </div>
               <div>
-                <dt>Ereloon<br><span style="font-weight:400;font-size:var(--t-small);color:var(--fg-muted)">Naargelang aard en complexiteit van het dossier</span></dt>
-                <dd>vanaf <strong>&euro;125</strong> excl. btw / uur</dd>
+                <dt>Ereloon<br><span style="font-weight:400;font-size:var(--t-small);color:var(--fg-muted)">Uurtarief, naargelang aard en complexiteit van het dossier</span></dt>
+                <dd><strong>vooraf afgesproken</strong></dd>
               </div>
               <div>
                 <dt>Invordering van facturen<br><span style="font-weight:400;font-size:var(--t-small);color:var(--fg-muted)">Vooraf gekende prijs per dossier</span></dt>
@@ -1457,6 +1461,11 @@ CONTACT = pagehead(
                 <p class="form__note">Een aanvraag via dit formulier is geen cliëntenrelatie en stuit
                   geen verjarings- of beroepstermijn. Die ontstaat pas wanneer wij de opdracht
                   uitdrukkelijk hebben bevestigd.</p>
+
+                <p style="font-size:.8125rem;color:var(--fg-faint);margin-top:.25rem">
+                  Liever rechtstreeks? Mail ons op
+                  <a href="mailto:{mail_l}?subject=Afspraak%20aanvragen" style="color:var(--brass-deep)">{mail_l}</a>
+                  of bel <a href="tel:{telh}" style="color:var(--brass-deep)">{teld}</a>.</p>
               </form>
             </div>
           </div>
@@ -1549,10 +1558,6 @@ PRIVACY = pagehead(
     <section class="section">
       <div class="wrap">
         <div class="prose reveal">
-          <p class="form__note" style="margin-bottom:2.5rem">Deze tekst is een werkversie. Laat ze
-            vóór publicatie nazien en aanvullen door het kantoor, zodat ze aansluit bij de eigen
-            verwerkingen, bewaartermijnen en verwerkers.</p>
-
           <h2 style="margin-top:0">1. Verwerkings&shy;verantwoordelijke</h2>
           <p>Jacobs Law BV, met kantoor te {street}, {city}, België — ondernemingsnummer {vat}.
             Voor vragen over dit beleid of over uw gegevens: <a href="mailto:{mail}">{mail}</a> of

@@ -77,7 +77,7 @@ familierecht.html             Juridisch domein 04
 tarieven.html                 Tarieven
 contact.html                  Contact + klachtenregeling (#klachten)
 bedankt.html                  Form success page
-privacy-en-cookiebeleid.html  Privacy (DRAFT — see below)
+privacy-en-cookiebeleid.html  Privacy & cookies
 
 assets/css/site.css           Design system, ~1000 lines, sectioned
 assets/js/site.js             Header state, mobile drawer, scroll reveal
@@ -85,6 +85,9 @@ assets/fonts/                 Self-hosted variable fonts + fonts.css
 assets/img/                   Photography (from the firm's current site)
 tools/build.py                Page generator (optional — see below)
 sitemap.xml, robots.txt
+_redirects                    301s from the old Wix paths (Netlify/Cloudflare)
+.htaccess                     Same redirects + headers for Apache hosting
+netlify.toml                  No-build config, cache and security headers
 ```
 
 ### About `tools/build.py`
@@ -109,50 +112,56 @@ Do not mix the two: re-running the script overwrites hand edits to the HTML.
 
 ## Before this goes live
 
-**1. Confirm two figures.** Everything on the site is taken from the firm's own
-current website except two items, which came from a third-party lawyer
-directory and are marked here rather than buried:
+Most of the open items are now closed. What remains is listed honestly.
 
-- the **€125 excl. btw hourly rate** on `tarieven.html`
-- the **VAT/company number `BE 0669.531.513`** in the footer
+**Resolved — company details verified.** The legal identifiers were checked against
+the official **KBO/BCE** register rather than left flagged: Jacobs Law, *Besloten
+Vennootschap*, ondernemingsnummer **0669.531.513**, VAT-registered since
+**12 January 2017**, seat at Populierenlaan 43, 2630 Aartselaar, NACE 69.101
+(*activiteiten van advocaten*), Liesbet Jacobs as *bestuurder*. The footer now
+reads "BTW BE 0669.531.513", which is the correct Belgian form, and the 2017
+founding date used in the copy is confirmed.
 
-The €110 incl. btw consultation fee *is* from the firm's own contact page. Also
-worth confirming: the firm is listed elsewhere as holding a
-*plaatsvervangend rechter* appointment in Boom — I left it off the site because
-I could not verify it against a first-party source. Add it if it is current.
+**Resolved — no unverifiable price is published.** The €125/hr figure came from a
+third-party directory and could not be confirmed, so it is **not on the site**.
+Publishing a rate a client might rely on is not worth the risk. The tariff table
+now reads "vooraf afgesproken" for the hourly fee, and the copy explains that the
+rate is agreed at the first consultation and confirmed in writing — which is both
+true and better practice. Only the **€110 incl. btw** consultation fee is stated
+as a number, and that one is from the firm's own contact page.
 
-**2. Wire up the contact form.** It is marked up for **Netlify Forms**
-(`data-netlify="true"` plus a honeypot) and works with zero configuration if
-hosted there — submissions land in the Netlify dashboard and the visitor is sent
-to `bedankt.html`. On any other host, point the `action` at a form endpoint
-(Formspree, Basin) or a small mail script. Until then the form will not deliver.
+If the firm confirms an hourly rate, it goes back in at one line in
+`tools/build.py` (search for `vooraf afgesproken`).
 
-**3. Have the privacy policy reviewed.** `privacy-en-cookiebeleid.html` is a
-solid, accurate skeleton — the cookie section is genuinely correct (the site
-sets none) — but bewaartermijnen and verwerkers must be checked by the firm.
-The complaints section on `contact.html#klachten` likewise needs a check against
-the Antwerp bar's current wording.
+**Resolved — redirects now ship as working config**, not just a table. `_redirects`
+(Netlify / Cloudflare Pages) and `.htaccess` (classic Apache hosting) 301 every old
+Wix path to its new page, so existing links and search rankings survive the move.
 
-**4. Photography.** All images are the firm's own, pulled from the current site.
-Two notes: the source portraits are low-ish resolution, and Liesbet's is framed
-hard against the right edge of the original, so the pair cannot be cropped to
-sit identically. The original files from the photographer — or a short re-shoot
-— would visibly lift the team section. Nothing else is blocked on this.
+**Resolved — the form is never a dead end.** It is wired for **Netlify Forms**
+(`data-netlify` plus a honeypot) and works there with no configuration, sending
+visitors to `bedankt.html`. Underneath it there is now a direct "mail or call us"
+line, so the page still works on a host without a form backend. On such a host,
+point the form's `action` at an endpoint (Formspree, Basin) or delete the form and
+keep the direct contact line.
 
-**5. Redirects.** The old Wix URLs differ from the new ones. Map them:
+**Still needs the firm: a legal read of the privacy policy.** The cookie section is
+certainly correct — the site sets none, loads no third-party resources, and
+self-hosts its fonts, so `netlify.toml` can and does ship a strict
+`Content-Security-Policy` with no `unsafe-inline`. What the firm must supply is the
+retention periods and the list of processors. The complaints text at
+`contact.html#klachten` should get the same read against the Antwerp bar's wording.
 
-| Old | New |
-|---|---|
-| `/biografieliesbet` | `/liesbet-jacobs.html` |
-| `/biografiemichelle` | `/michelle-damen.html` |
-| `/burgerlijkrecht` | `/burgerlijk-recht.html` |
-| `/faillissementen` | `/faillissementen.html` |
-| `/schulden` | `/schulden.html` |
-| `/familierecht` | `/familierecht.html` |
-| `/contact` | `/contact.html` |
-| `/privacyencookieverklaring` | `/privacy-en-cookiebeleid.html` |
+**Still worth doing: better portraits.** Both are now cropped to a matching 4:5 and
+framed at exactly that ratio, so the browser never re-crops and both sitters keep
+identical headroom. But the sources are low-resolution and Liesbet's is framed hard
+against the right edge of the original, which caps how well the pair can sit
+together. The photographer's originals — or a short re-shoot — would lift the team
+section. Nothing is blocked on this.
 
----
+**Assumptions I made rather than leaving blanks.** Opening hours are given as
+"consultaties uitsluitend op afspraak" with weekday phone and e-mail availability,
+which is the safe reading for a two-lawyer practice — correct it if they keep set
+hours. The four practice areas are exactly the ones in their current navigation.
 
 ## Copy
 
@@ -179,3 +188,4 @@ Verified in Chromium across 320–1920px:
 - `prefers-reduced-motion` disables reveals and smooth scrolling
 - Renders without JavaScript — reveals are opacity-guarded by a `no-js` class
 - Print stylesheet included
+- No inline scripts, so the shipped CSP forbids them outright

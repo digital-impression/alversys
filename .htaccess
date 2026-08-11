@@ -1,0 +1,24 @@
+# Apache equivalent of _redirects, for classic/FTP hosting.
+# Not used on Netlify, Vercel or Cloudflare Pages — harmless if left in place.
+
+<IfModule mod_alias.c>
+  Redirect 301 /biografieliesbet            /liesbet-jacobs.html
+  Redirect 301 /biografiemichelle           /michelle-damen.html
+  Redirect 301 /burgerlijkrecht             /burgerlijk-recht.html
+  Redirect 301 /faillissementen             /faillissementen.html
+  Redirect 301 /schulden                    /schulden.html
+  Redirect 301 /familierecht                /familierecht.html
+  Redirect 301 /contact                     /contact.html
+  Redirect 301 /over-ons                    /over-ons.html
+  Redirect 301 /privacyencookieverklaring   /privacy-en-cookiebeleid.html
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  <FilesMatch "\.(woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>
+
+ErrorDocument 404 /index.html

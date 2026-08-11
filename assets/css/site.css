@@ -847,7 +847,9 @@ body.is-locked { overflow: hidden; }
 }
 .person__media img {
   width: 100%;
-  aspect-ratio: 4 / 4.6;
+  /* The portrait files are cropped to exactly 4:5, so the frame matches them
+     and the browser never crops again — both sitters keep identical headroom. */
+  aspect-ratio: 4 / 5;
   object-fit: cover;
   filter: saturate(0.92);
   transition: transform 0.7s var(--ease), filter 0.5s var(--ease);
@@ -876,11 +878,11 @@ body.is-locked { overflow: hidden; }
 .person:hover .person__name { color: var(--brass-deep); }
 .person__desc { font-size: var(--t-small); color: var(--fg-muted); margin-bottom: 1.15rem; }
 
-/* The portraits are supplied at 4:5 and these frames are slightly taller, so
-   cover crops vertically. Bias the crop upward to keep the eyes off the seam. */
+/* Frames now match the source ratio exactly, so object-position is only a
+   safety net if a replacement photo ships at a different aspect. */
 .person__media img,
 .framed img.focus-right,
-.framed img.focus-left { object-position: center 26%; }
+.framed img.focus-left { object-position: center 30%; }
 
 /* ---------- 12. Steps (werkwijze) ---------------------------------------- */
 

@@ -7,6 +7,11 @@
 
   document.documentElement.classList.remove('no-js');
 
+  /* Footer copyright year. Kept here rather than in an inline <script> so the
+     Content-Security-Policy can forbid inline scripts outright. */
+  var year = document.getElementById('year');
+  if (year) year.textContent = String(new Date().getFullYear());
+
   /* --- Header: solid state once scrolled past the hero ------------------ */
   var header = document.querySelector('.header');
   if (header) {
