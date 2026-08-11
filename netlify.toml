@@ -1,0 +1,41 @@
+# Hostingconfiguratie voor Netlify.
+# Bij een andere host: neem de headers hieronder over in de serverconfiguratie
+# (bij Apache in .htaccess, bij nginx in de serverblock).
+
+[build]
+  publish = "."
+  command = "python3 tools/build.py"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), camera=(), microphone=(), interest-cohort=()"
+    # De site laadt uitsluitend eigen bestanden: geen externe scripts,
+    # geen externe lettertypes, geen trackers.
+    Content-Security-Policy = "default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; form-action 'self'; frame-ancestors 'none'; base-uri 'self'"
+
+[[headers]]
+  for = "/assets/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+# De oude site draaide op http:// zonder certificaat.
+# Netlify voorziet automatisch een gratis certificaat en dwingt https af.
+[[redirects]]
+  from = "/index.htm"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/home"
+  to = "/"
+  status = 301

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Plaats voor het portret van Veerle Borremans">
+  <defs>
+    <linearGradient id="ground" x1="0.15" y1="0" x2="0.85" y2="1">
+      <stop offset="0" stop-color="#f2ece3"/>
+      <stop offset="0.55" stop-color="#e8ded1"/>
+      <stop offset="1" stop-color="#ddd0be"/>
+    </linearGradient>
+    <radialGradient id="light" cx="0.34" cy="0.26" r="0.72">
+      <stop offset="0" stop-color="#fdfbf7" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#fdfbf7" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.05"/></feComponentTransfer>
+    </filter>
+  </defs>
+
+  <rect width="800" height="1000" fill="url(#ground)"/>
+  <rect width="800" height="1000" fill="url(#light)"/>
+
+  <!-- silhouet als rustige aanduiding van waar de figuur komt te staan -->
+  <g fill="#2e4034" fill-opacity="0.07">
+    <circle cx="400" cy="440" r="118"/>
+    <path d="M400 596c132 0 239 107 239 239v165H161V835c0-132 107-239 239-239Z"/>
+  </g>
+
+  <rect width="800" height="1000" filter="url(#grain)" opacity="0.65"/>
+</svg>
