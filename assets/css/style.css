@@ -71,9 +71,12 @@
   --step-2:  clamp(1.44rem, 1.32rem + 0.58vw, 1.758rem);
   --step-3:  clamp(1.728rem, 1.55rem + 0.89vw, 2.197rem);
   --step-4:  clamp(2.074rem, 1.81rem + 1.32vw, 2.747rem);
-  --step-5:  clamp(2.488rem, 2.10rem + 1.94vw, 3.433rem);
-  --step-6:  clamp(2.986rem, 2.43rem + 2.78vw, 4.292rem);
-  --step-7:  clamp(3.583rem, 2.79rem + 3.96vw, 5.364rem);
+  /* De onderkant van de schaal is bewust wat lager gezet dan een strikt
+     modulaire schaal zou geven: op een telefoon van 390px moet een titel
+     van vier woorden niet het halve scherm opeten. */
+  --step-5:  clamp(2.1rem, 1.75rem + 1.75vw, 3.433rem);
+  --step-6:  clamp(2.45rem, 1.95rem + 2.6vw, 4.292rem);
+  --step-7:  clamp(2.9rem, 2.25rem + 3.3vw, 5.364rem);
 
   /* Ruimte */
   --sp-1: 0.25rem;
@@ -125,8 +128,11 @@ html {
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--header-h) + 24px);
-  /* clip (niet hidden): het uitgeschoven mobiele menu mag nooit een
-     horizontale scrollbalk veroorzaken, maar sticky posities moeten blijven werken */
+  /* Het mobiele menu staat in rust rechts buiten beeld en mag nooit een
+     horizontale scrollbalk veroorzaken. `clip` verdient de voorkeur boven
+     `hidden` omdat het geen scrollcontainer maakt en position:sticky dus
+     blijft werken; `hidden` staat ervoor als terugval voor oudere browsers. */
+  overflow-x: hidden;
   overflow-x: clip;
 }
 
@@ -139,6 +145,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: "kern", "liga", "calt";
+  overflow-x: hidden;
   overflow-x: clip;
 }
 
@@ -422,15 +429,26 @@ em.accent, .accent-warm {
   position: sticky;
   top: 0;
   z-index: 100;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+/* De matglas-achtergrond staat bewust op een pseudo-element en niet op
+   .site-header zelf: backdrop-filter maakt van een element een containing
+   block voor position:fixed-kinderen, waardoor het mobiele menupaneel
+   (dat in de header staat) tot de hoogte van de header werd afgeknipt. */
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
   background: rgba(246, 244, 241, 0.86);
   backdrop-filter: saturate(180%) blur(14px);
   -webkit-backdrop-filter: saturate(180%) blur(14px);
-  border-bottom: 1px solid transparent;
-  transition: background-color 0.3s var(--ease), border-color 0.3s var(--ease),
-              box-shadow 0.3s var(--ease);
+  transition: background-color 0.3s var(--ease);
 }
+.site-header.is-stuck::before { background: rgba(246, 244, 241, 0.94); }
 .site-header.is-stuck {
-  background: rgba(246, 244, 241, 0.94);
   border-bottom-color: var(--border);
   box-shadow: 0 6px 24px -18px rgba(8, 25, 28, 0.5);
 }
@@ -551,7 +569,7 @@ em.accent, .accent-warm {
     flex-direction: column;
     align-items: stretch;
     justify-content: flex-start;
-    padding: calc(var(--header-h) + 2rem) var(--sp-6) var(--sp-6);
+    padding: calc(var(--header-h) + 3.5rem) var(--sp-6) var(--sp-6);
     transform: translateX(100%);
     transition: transform 0.42s var(--ease-out);
     overflow-y: auto;

@@ -316,7 +316,7 @@
           <!-- Vloerverwarming: serpentine in de vloerplaat -->
           <path class="sch-flow" style="animation-duration:5.4s"
                 d="M240 444q11-16 22 0t22 0t22 0t22 0t22 0t22 0t22 0t22 0t22 0t22 0t22 0t22 0t22 0t22 0"/>
-          <text class="sch-label" x="240" y="408">Vloerverwarming</text>
+          <text class="sch-label" x="336" y="408">Vloerverwarming</text>
 
           <!-- Buitenunit -->
           <g>
@@ -331,8 +331,10 @@
           <text class="sch-label" x="30" y="338">Buitenunit</text>
           <path class="sch-tick" d="M30 344h94"/>
 
-          <!-- Koelleiding: buitenunit -> verdeling binnen -->
-          <path class="sch-flow" d="M150 392h54a12 12 0 0 0 12-12V274a12 12 0 0 1 12-12h202"/>
+          <!-- Koelleiding: buitenunit -> verdeling binnen.
+               De hoofdleiding loopt hoog langs de wand zodat ze vrij blijft
+               van de bijschriften bij de boiler en de vloerverwarming. -->
+          <path class="sch-flow" d="M150 392h54a12 12 0 0 0 12-12V242a12 12 0 0 1 12-12h190a12 12 0 0 1 12 12v20"/>
           <path class="sch-flow" d="M216 330h24"/>
           <path class="sch-flow" d="M216 400v32a12 12 0 0 0 12 12h12"/>
 
