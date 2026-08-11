@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="og-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0E2A2E"/>
+      <stop offset="1" stop-color="#08191C"/>
+    </linearGradient>
+    <radialGradient id="og-warm" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#C4763F" stop-opacity=".38"/>
+      <stop offset="1" stop-color="#C4763F" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="og-cool" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#4FA3A8" stop-opacity=".34"/>
+      <stop offset="1" stop-color="#4FA3A8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="og-rule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6FBFC2"/>
+      <stop offset="50%" stop-color="#CFC7BC"/>
+      <stop offset="1" stop-color="#C4763F"/>
+    </linearGradient>
+    <pattern id="og-grid" width="72" height="72" patternUnits="userSpaceOnUse">
+      <path d="M72 0H0v72" fill="none" stroke="#ffffff" stroke-opacity=".045" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#og-bg)"/>
+  <rect width="1200" height="630" fill="url(#og-grid)"/>
+  <circle cx="1010" cy="130" r="420" fill="url(#og-warm)"/>
+  <circle cx="150" cy="560" r="400" fill="url(#og-cool)"/>
+
+  <!-- Merkteken -->
+  <g transform="translate(88 74)">
+    <rect width="72" height="72" rx="18" fill="#14393E"/>
+    <g transform="scale(1.8)">
+      <path d="M27 13A7 7 0 1 0 20 20" fill="none" stroke="#6FBFC2" stroke-width="3.4" stroke-linecap="round"/>
+      <path d="M20 20a7 7 0 1 1-7 7" fill="none" stroke="#D89463" stroke-width="3.4" stroke-linecap="round"/>
+    </g>
+  </g>
+  <text x="180" y="112" font-family="Fraunces, Georgia, serif" font-size="42" font-weight="600" fill="#ffffff" letter-spacing="-1">DS Comfort</text>
+  <text x="181" y="140" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#849698" letter-spacing="5">AIRCO · WARMTEPOMPEN</text>
+
+  <!-- Kop -->
+  <text x="88" y="316" font-family="Fraunces, Georgia, serif" font-size="80" font-weight="600" fill="#ffffff" letter-spacing="-2">Warmte én koeling,</text>
+  <text x="88" y="404" font-family="Fraunces, Georgia, serif" font-size="80" font-weight="600" font-style="italic" fill="#D89463" letter-spacing="-2">van één vaste vakman.</text>
+
+  <rect x="88" y="448" width="120" height="4" rx="2" fill="url(#og-rule)"/>
+
+  <text x="88" y="506" font-family="Inter, Helvetica, Arial, sans-serif" font-size="25" fill="#BEE0E0">Daikin &amp; Panasonic · Leuven en omgeving · sinds 2013</text>
+
+  <!-- Keurmerken -->
+  <g font-family="Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="600" letter-spacing="2" fill="#BEE0E0">
+    <rect x="88" y="536" width="322" height="42" rx="21" fill="#ffffff" fill-opacity=".06" stroke="#ffffff" stroke-opacity=".16"/>
+    <text x="112" y="563">ERKEND KOELTECHNISCH BEDRIJF</text>
+    <rect x="426" y="536" width="252" height="42" rx="21" fill="#ffffff" fill-opacity=".06" stroke="#ffffff" stroke-opacity=".16"/>
+    <text x="450" y="563" fill="#EBC5A8">RESCERT-GECERTIFICEERD</text>
+  </g>
+
+  <!-- Telefoon -->
+  <text x="1112" y="566" text-anchor="end" font-family="Fraunces, Georgia, serif" font-size="38" font-weight="600" fill="#ffffff">0485 79 66 84</text>
+</svg>
