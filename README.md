@@ -10,56 +10,47 @@ afhankelijkheden. Upload de map en de site draait.
 
 ## 1. Het ontwerp in het kort
 
-### Het concept: warm & koud
+### Uitgangspunt: comfort in huis, niet techniek
 
-DS Comfort verkoopt twee dingen — **warmte** (warmtepompen) en **koeling** (airco).
-Dat is de basis van het hele ontwerp geworden, in plaats van een decoratieve keuze
-achteraf:
+Dit is een website over aangenaam wonen, niet over koeltechniek. Licht,
+fotogedreven en vlot leesbaar. Blauw voor de koelkant, warm amber voor de
+verwarmingskant, en verder zo veel mogelijk wit en lucht.
 
-| Element | Betekenis |
+| Kleur | Rol |
 |---|---|
-| **Koper** (`#C4763F`) | warmte, verwarming, warmtepompen |
-| **Aqua** (`#4FA3A8`) | koeling, airco |
-| **Diep teal** (`#0E2A2E`) | de basis: techniek, betrouwbaarheid, avond/nacht |
-| **Warm zand** (`#F6F4F1`) | rustvlak, leesbaarheid |
+| **Blauw** (`#1476B7`) | koelen, airco, links, accenten |
+| **Amber** (`#B45A12`) | verwarmen, knoppen, alles wat om actie vraagt |
+| **Marine** (`#0B2032`) | hero-overlay, CTA-band en voettekst |
+| **Wit / zacht grijsblauw** (`#FFF` / `#F4F8FA`) | de grond waarop alles staat |
 
-De **thermische lijn** — een dunne streep die van aqua naar koper verloopt — is het
-handtekeningelement. Ze komt terug in de sectiekoppen, onder de navigatie, in de
-tijdlijn van de werkwijze en in de footer. Airco-secties leunen naar aqua,
-warmtepompsecties naar koper.
-
-Bewust *géén* standaard-HVAC-blauw: elke concurrent in de sector gebruikt dat.
+De amberknop is bewust een tint donkerder dan de accentkleur: wit op het lichtere
+amber haalde maar 3,45:1 en zakte daarmee onder de leesbaarheidsdrempel.
 
 ### Typografie
 
-- **Fraunces** — koppen. Een warme, hoogcontrast serif. Ongebruikelijk in deze
-  sector, en precies daarom herkenbaar. Cursief in koper voor de kernwoorden.
-- **Inter** — lopende tekst, navigatie, knoppen, labels.
+- **Figtree** — koppen, knoppen en labels. Vriendelijk, stevig en zeer leesbaar
+  op grote formaten.
+- **Source Sans 3** — lopende tekst. Getekend om te lezen, ook op kleine maten.
 
-### Beeld: getekend, niet gekocht
+Basisgrootte 18px met regelafstand 1,7, en een vlakkere typeschaal dan
+gebruikelijk. Alle tekst haalt **WCAG AA** — met alfatransparantie meegerekend.
 
-Er staat geen enkele stockfoto op deze site. In de plaats komen **met de hand
-getekende technische schema's**, speciaal voor DS Comfort gemaakt:
+### Beeld
 
-- **Home** — doorsnede van een woning: buitenunit, split-unit, boiler, vloerverwarming
-- **Airco** — multi-split opstelling: één buitenunit, drie binnenunits
-- **Warmtepompen** — principeschema: omgevingswarmte + elektriciteit → warmte in huis
-- **Onderhoud** — de onderhoudscyclus als draaiende ring
-- **Werkgebied** — gestileerde kaart met Heverlee als middelpunt
-- **Zwembad** — zwembad met warmtepomp
+De site is **rond fotografie gebouwd**: elk beeldkader heeft al de juiste
+verhouding en plaats. Zolang er nog geen foto in zit, toont het kader een
+verzorgde tussenoplossing met de naam van de gewenste opname.
 
-Ze zijn licht geanimeerd (stromende leidingen) en respecteren
-`prefers-reduced-motion`. Als SVG zijn ze scherp op elk scherm en samen wegen ze
-minder dan één foto.
+Zie **[FOTOS.md](FOTOS.md)** voor de volledige shotlijst, de bestandsnamen en
+hoe u een foto plaatst (twee handelingen per beeld).
 
 ### Positionering
 
 De sterkste boodschap van DS Comfort stond op de oude site verstopt als een
 excuus: *"wij herstellen en onderhouden enkel installaties die wij zelf geplaatst
-hebben."* In dit ontwerp is dat een **verkoopargument** geworden en krijgt het een
-eigen sectie op de homepage en een eigen pagina. Het verklaart meteen waarom er
-maar twee merken zijn en waarom het werkgebied beperkt blijft: het is één
-consistent verhaal over kwaliteit boven volume.
+hebben."* Hier is dat een **verkoopargument** geworden, met een eigen pagina. Het
+verklaart meteen waarom er maar twee merken zijn en waarom het werkgebied beperkt
+blijft: één consistent verhaal over kwaliteit boven volume.
 
 ---
 
@@ -79,6 +70,7 @@ algemene-voorwaarden.html   Algemene voorwaarden  ← nog aan te vullen, zie §5
 assets/css/style.css        Volledig ontwerpsysteem (alle kleuren, maten, componenten)
 assets/js/main.js           Menu, accordeon, scroll-reveal, formuliervalidatie
 assets/img/icons.svg        Icoonset (wordt in elke pagina ingevoegd)
+assets/img/photos/          Uw foto's — zie FOTOS.md
 assets/img/favicon.svg      Favicon
 assets/img/og-image.svg     Bron van de deelafbeelding
 assets/img/og-image.png     Deelafbeelding voor Facebook/LinkedIn/WhatsApp
@@ -86,6 +78,7 @@ assets/img/og-image.png     Deelafbeelding voor Facebook/LinkedIn/WhatsApp
 _partials/                  Gedeelde blokken (header, footer, CTA)
 build.py                    Giet die blokken in elke pagina
 sitemap.xml, robots.txt     SEO
+FOTOS.md                    Shotlijst en instructies voor de fotografie
 ```
 
 ### De gedeelde blokken
