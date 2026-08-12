@@ -87,9 +87,21 @@ Gelijke paren gebruiken 1–6 / 7–12, asymmetrische 1–5 / 7–12; in beide g
 begint de rechterkolom op kolom 7.
 
 **Gecontroleerd:** 1 h1, geen overgeslagen kopniveaus, alle alt-teksten, geen
-horizontale overflow op 360–1920px, alle tekst haalt WCAG AA gemeten op de
+horizontale overflow op 320–1920px, geen tikdoel kleiner dan 44px, alle tekst haalt WCAG AA gemeten op de
 *gerenderde* stijlen, focus 2px goud met 3px offset, accordeon één tegelijk open,
 `prefers-reduced-motion` schakelt alles uit, geen console-fouten.
+
+
+**Na de tweede feedbackronde.** Het hero-beeld blijft binnen zijn kolom en houdt
+dus dezelfde marge rechts als links. Van de twee banden onder de hero is er nog
+één: de vertrouwensband. De jaartallen stonden namelijk op drie plaatsen tegelijk
+(statbalk, lopende tekst én mandatentabel) — die staan nu alleen nog in de
+insolventietekst, en de kaart daarnaast draagt andere inhoud. De sectie *Waarom
+cliënten hier terechtkomen* is opgewaardeerd tot serif-tussenkoppen met haarlijnen
+en een afsluitende regel. Het proces staat op licht in plaats van op donker, wat
+de leesbaarheidsklacht structureel oplost. De CTA is naar boven verplaatst (na het
+team) en de contactsectie staat op licht, zodat er nergens twee gelijk gekleurde
+secties op elkaar volgen.
 
 **Nog te doen als de subpagina's blijven.** De elf losse pagina's hieronder hebben
 het oude systeem nog. De one-pager vervangt de startpagina; wil je de subpagina's
