@@ -1,6 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <path d="M32 2c14.36 0 26 11.64 26 26v30a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4V28C6 13.64 17.64 2 32 2Z" fill="#2e4034"/>
-  <text x="32" y="44" text-anchor="middle"
-        font-family="Georgia, 'Times New Roman', serif"
-        font-size="28" fill="#f7f4ef">VB</text>
+  <rect width="64" height="64" fill="#1d3226"/>
+  <path d="M8 50h48" stroke="#a98a4b" stroke-width="2"/>
+  <text x="32" y="40" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="30" fill="#f5f2ea">VB</text>
 </svg>

@@ -27,11 +27,9 @@ vervangen te worden door eigen beeldmateriaal — zie `INHOUD-TODO.md`.
 
 | Bestand | Origineel | Auteur | Licentie |
 |---|---|---|---|
-| `begijnhof.jpg` | [Middenstraat, Groot Begijnhof of Leuven](https://commons.wikimedia.org/wiki/File:Middenstraat,_Groot_Begijnhof_of_Leuven_(DSCF0911).jpg) | Trougnouf (Benoit Brummer) | CC BY 4.0 |
-| `weg.jpg` | [Groot Begijnhof in Leuven (2)](https://commons.wikimedia.org/wiki/File:Groot_Begijnhof_in_Leuven_(2).jpg) | Krzysztof Golik | CC BY-SA 4.0 |
-| `gevel.jpg` | [Groot Begijnhof in Leuven (3)](https://commons.wikimedia.org/wiki/File:Groot_Begijnhof_in_Leuven_(3).jpg) | Krzysztof Golik | CC BY-SA 4.0 |
-| `licht.jpg` | [Dülmen, Börnste, Waldweg](https://commons.wikimedia.org/wiki/File:D%C3%BClmen,_B%C3%B6rnste,_Waldweg_--_2024_--_6257.jpg) | Dietmar Rabich | CC BY-SA 4.0 |
-| `pad.jpg` | [Prospect Park November 2016](https://commons.wikimedia.org/wiki/File:Prospect_Park_New_York_November_2016_001.jpg) | King of Hearts | CC BY-SA 4.0 |
+| `begijnhof.jpg` | [Groot Begijnhof in Leuven (2)](https://commons.wikimedia.org/wiki/File:Groot_Begijnhof_in_Leuven_(2).jpg) | Krzysztof Golik | CC BY-SA 4.0 |
+| `gerechtshal.jpg` | [Gerechtsgebouw Leuven 4](https://commons.wikimedia.org/wiki/File:Gerechtsgebouw_Leuven_4.jpg) | LevenInA | CC BY-SA 4.0 |
+| `gerechtsgebouw.jpg` | [Ferdinand Smoldersplein 5 (Leuven)](https://commons.wikimedia.org/wiki/File:Ferdinand_Smoldersplein_5_(Leuven).jpg) | Wouter Hagens | CC BY-SA 3.0 |
 
 **Let op:** CC BY-SA verplicht tot naamsvermelding én verspreiding van de
 bewerking onder dezelfde licentie. Zolang deze foto's op de site staan, moet

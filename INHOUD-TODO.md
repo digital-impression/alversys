@@ -34,9 +34,16 @@ Eén van beide is verouderd. Welk het ook is: laat het overal gelijktrekken
 (advocaat.be, Google Bedrijfsprofiel, Gouden Gids, jeugdadvocaat.be). Voor de
 vindbaarheid in Google telt consistentie van naam, adres en telefoon zwaar.
 
-## 2. Tarieven — nu nog nulbedragen
+## 2. Tarieven: er staan nu bedragen op de site
 
-De hele pagina `tarieven.html` staat er, maar met `€ 00` en `€ 000`.
+**Let op:** op de homepage en in de veelgestelde vragen staan sinds deze ronde
+**concrete bedragen** (€ 90 voor het eerste gesprek, € 125 per uur). Het
+ontwerp vroeg om één hard cijfer, want de sectie belooft "vooraf weten waar u
+aan toe bent". Die bedragen zijn door ons ingevuld als plausibele Vlaamse
+tarieven en zijn **niet bevestigd**. Ze staan gemarkeerd. Dit moet vóór
+publicatie kloppen of eruit.
+
+De pagina `tarieven.html` staat er verder met `€ 00` en `€ 000`.
 
 - Tarief eerste consult (en: is dat betalend of gratis?)
 - Uurtarief dossierbehandeling (excl. btw)
@@ -83,14 +90,17 @@ Dit is het grootste openstaande punt voor de uitstraling.
 - **Portretfoto** — staand, 4:5, in natuurlijk licht, rustige achtergrond.
   Dit is het beeld waarop het hele ontwerp steunt. Vervang
   `assets/img/portret-placeholder.svg` door `assets/img/portret.jpg`.
-- **Vijf sfeerbeelden** die de site nu draagt (`begijnhof`, `weg`, `gevel`,
-  `licht`, `pad`) zijn **tijdelijk**. Drie ervan tonen het Groot Begijnhof
-  in Leuven, wat de praktijk meteen lokaal verankert. Ze komen van Wikimedia
+- **Drie sfeerbeelden** die de site nu draagt (`gerechtshal`,
+  `gerechtsgebouw`, `begijnhof`) zijn **tijdelijk**. Ze tonen het
+  gerechtsgebouw van Leuven en het Groot Begijnhof: wereld van het onderwerp
+  en lokaal verankerd. Ze komen van Wikimedia
   Commons en zijn in de huisstijl bewerkt zodat ze als één geheel lezen.
   Zolang ze er staan, moet de naamsvermelding op `juridische-informatie.html`
   blijven staan (CC BY-SA). Vervangen we ze door eigen foto's, dan vervalt dat.
-- Wat we in de plaats het liefst krijgen: het kantoor of de gespreksruimte,
-  een detail van haar bureau, en desnoods een sfeerbeeld van Leuven.
+- Wat we in de plaats nodig hebben: **het kantoor van buiten** en **een
+  detail van binnen**. Die twee plaatsen staan nu leeg in het ontwerp.
+- Openingsuren, parkeerinfo en de LinkedIn-URL staan als aanname in de voet
+  en bij Kennismaken.
 - Nieuwe foto's krijgen dezelfde behandeling met
   `python3 tools/beeld.py foto.jpg naam 4:5 1100`, zodat ze meteen in de
   huisstijl passen.

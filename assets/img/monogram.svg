@@ -1,16 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Monogram Veerle Borremans">
-  <defs>
-    <clipPath id="arch">
-      <path d="M32 2c14.36 0 26 11.64 26 26v30a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4V28C6 13.64 17.64 2 32 2Z"/>
-    </clipPath>
-  </defs>
-  <g clip-path="url(#arch)">
-    <rect width="64" height="64" fill="#2e4034"/>
-    <path d="M0 44c14 6 30 6 44 0s20-6 20-6v26H0Z" fill="#22302a"/>
-  </g>
-  <path d="M32 2c14.36 0 26 11.64 26 26v30a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4V28C6 13.64 17.64 2 32 2Z"
-        fill="none" stroke="#b08968" stroke-width="1.5"/>
-  <text x="32" y="43.5" text-anchor="middle"
-        font-family="Georgia, 'Times New Roman', 'Iowan Old Style', serif"
-        font-size="26" fill="#f7f4ef" letter-spacing="-0.5">VB</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 84" role="img" aria-label="Monogram Veerle Borremans">
+  <rect x="1" y="1" width="66" height="82" fill="#1d3226" stroke="#a98a4b" stroke-width="1"/>
+  <path d="M9 63h50" stroke="#a98a4b" stroke-width="1"/>
+  <text x="34" y="48" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="30" fill="#f5f2ea">VB</text>
+  <text x="34" y="75" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="9" letter-spacing="1.6" fill="#bfa267">LEUVEN</text>
 </svg>

@@ -5,44 +5,40 @@ nav: home
 priority: 1.0
 ---
       <section class="hero">
-        <div class="arch-bg" aria-hidden="true"></div>
         <div class="shell hero__grid">
           <div class="stagger">
             <p class="eyebrow" style="--i:0">Advocatenkantoor te Leuven</p>
             <h1 class="hero__title" style="--i:1">Recht raakt zelden alleen&nbsp;papier.<br><em>Het raakt mensen.</em></h1>
             <p class="hero__lede" style="--i:2">
-              Een scheiding. Een kind dat vastloopt. Een ouder die niet meer zelf
-              kan beslissen. Achter elk dossier zit een gezin en een verhaal. Ik help
-              u daar doorheen, in gewone taal, en ik zeg u eerlijk wat wel en niet kan.
+              Een scheiding. Een kind dat vastloopt. Een ouder die niet meer zelf kan
+              beslissen. Achter elk dossier zit een gezin en een verhaal. Ik help u
+              daar doorheen, in gewone taal, en ik zeg u eerlijk wat wel en niet kan.
             </p>
             <div class="btn-row" style="--i:3">
               <a class="btn" href="contact.html">Een eerste gesprek</a>
-              <a class="link-arrow" href="rechtsdomeinen.html" style="margin-left:0.75rem">Waarin ik u bijsta</a>
+              <a class="link-arrow" href="rechtsdomeinen.html">Waarin ik u bijsta</a>
             </div>
-            <p class="hero__meta" style="--i:4">
-              <span>Balie Leuven</span>
-              <span>Familie &amp; jeugd</span>
-              <span>Bemiddeling</span>
-              <span>Strafrecht</span>
-            </p>
+            <ul class="tags" style="--i:4">
+              <li>Balie Leuven</li>
+              <li>Familie &amp; jeugd</li>
+              <li>Bemiddeling</li>
+              <li>Strafrecht</li>
+            </ul>
           </div>
 
-          <figure class="portrait stagger--arch" style="margin:0">
-            <div class="portrait__frame">
-              <!-- Vervang dit bestand door de professionele portretfoto (staand, 4:5). -->
-              <img src="assets/img/portret-placeholder.svg" alt="Veerle Borremans, advocaat te Leuven" width="800" height="1000">
-            </div>
-            <figcaption class="portrait__caption"><span class="tbc">Portretfoto volgt</span></figcaption>
-          </figure>
+          <div class="hero__media frame-pending">
+            <!-- Vervang dit blok door: <img src="assets/img/portret.jpg" alt="Veerle Borremans, advocaat te Leuven" width="1000" height="1250"> -->
+            <span>Portret volgt<br>staand 4:5, in de eigen werkruimte</span>
+          </div>
         </div>
       </section>
 
-      <section class="section section--bone-deep">
-        <div class="shell split split--reverse">
-          <div class="reveal">
+      <section class="section section--linen">
+        <div class="shell split">
+          <div class="split__sticky">
             <p class="eyebrow">Het kantoor</p>
             <h2>Eén advocaat, die uw dossier zelf kent</h2>
-            <p class="lede" style="margin-top:1.5rem">
+            <p class="lede" style="margin-top:var(--s5)">
               U wordt niet doorgegeven van de ene medewerker naar de andere. Wie u aan
               de telefoon krijgt, is wie uw stukken heeft gelezen en wie mee naar de
               rechtbank gaat.
@@ -51,12 +47,14 @@ priority: 1.0
               Dat is een bewuste keuze. In familie- en jeugdzaken gaat het over
               vertrouwelijke, vaak pijnlijke dingen. Die vertelt u niet graag twee keer.
             </p>
+            <div class="btn-row">
+              <a class="link-arrow" href="over-mij.html">Meer over mij</a>
+            </div>
+          </div>
 
-            <ul class="pillars">
+          <div class="split__aside">
+            <ul class="pillars" style="margin-top:0">
               <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true">
-                  <path d="M12 21s-7-4.6-7-9.7A4.3 4.3 0 0 1 12 8a4.3 4.3 0 0 1 7 3.3C19 16.4 12 21 12 21Z"/>
-                </svg>
                 <h3>Persoonlijk</h3>
                 <p>
                   Uw dossier wordt door mij behandeld, van het eerste gesprek tot de
@@ -65,9 +63,6 @@ priority: 1.0
                 </p>
               </li>
               <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true">
-                  <path d="M4 6h16M4 12h10M4 18h13"/>
-                </svg>
                 <h3>Verstaanbaar</h3>
                 <p>
                   Uitleg in gewone taal, met de juridische termen erbij zodat u ze
@@ -75,9 +70,6 @@ priority: 1.0
                 </p>
               </li>
               <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true">
-                  <path d="M12 3 4 6.5v5c0 4.4 3.2 8.3 8 9.5 4.8-1.2 8-5.1 8-9.5v-5L12 3Z"/>
-                </svg>
                 <h3>Vertrouwelijk</h3>
                 <p>
                   Het beroepsgeheim van de advocaat is absoluut. Wat u mij vertelt,
@@ -86,25 +78,23 @@ priority: 1.0
               </li>
             </ul>
 
-            <div class="btn-row">
-              <a class="link-arrow" href="over-mij.html">Meer over mij</a>
-            </div>
-          </div>
-
-          <div class="split__aside reveal">
-            <div class="media media--arch framed">
-              <img src="assets/img/begijnhof.jpg" srcset="assets/img/begijnhof-700.jpg 700w, assets/img/begijnhof.jpg 1000w"
-                   sizes="(max-width: 60rem) 90vw, 32vw"
-                   alt="Een stille straat in het Groot Begijnhof te Leuven" width="1000" height="1250" loading="lazy" decoding="async">
-            </div>
-            <p class="figure-note"><span class="tbc">Tijdelijk beeld, te vervangen door een foto van het kantoor</span></p>
+            <dl class="dossier">
+              <div>
+                <dt>Balie</dt>
+                <dd>Orde van Advocaten te Leuven</dd>
+              </div>
+              <div>
+                <dt>Erkenning</dt>
+                <dd><span class="tbc">Federale Bemiddelingscommissie, familiezaken</span></dd>
+              </div>
+            </dl>
           </div>
         </div>
       </section>
 
       <section class="section" id="rechtsdomeinen">
         <div class="shell">
-          <div class="section-head reveal">
+          <div class="section-head">
             <p class="eyebrow">Rechtsdomeinen</p>
             <h2>Waarin ik u bijsta</h2>
             <div class="section-head__text">
@@ -117,14 +107,13 @@ priority: 1.0
             </div>
           </div>
 
-          <div class="domains reveal">
+          <div class="domains">
             <a class="domain" href="familierecht.html">
               <span class="domain__number">01</span>
               <span class="domain__title">Familierecht</span>
               <p class="domain__desc">
                 Echtscheiding, verblijfsregeling en onderhoudsbijdragen, afstamming,
-                erfenissen binnen het gezin. De afspraken die uw dagelijks leven
-                bepalen.
+                erfenissen binnen het gezin. De afspraken die uw dagelijks leven bepalen.
               </p>
               <span class="domain__go">Lezen</span>
             </a>
@@ -144,9 +133,9 @@ priority: 1.0
               <span class="domain__number">03</span>
               <span class="domain__title">Personenrecht</span>
               <p class="domain__desc">
-                Bewind over goederen en persoon, verlengde minderjarigheid,
-                naams- en staatswijziging, gedwongen opname. Het recht rond wie
-                iemand is en wie voor hem beslist.
+                Bewind over goederen en persoon, verlengde minderjarigheid, naams- en
+                staatswijziging, gedwongen opname. Het recht rond wie iemand is en wie
+                voor hem beslist.
               </p>
               <span class="domain__go">Lezen</span>
             </a>
@@ -161,17 +150,27 @@ priority: 1.0
               <span class="domain__go">Lezen</span>
             </a>
           </div>
+
+          <dl class="dossier" style="max-width:640px">
+            <div>
+              <dt>Rechtbank</dt>
+              <dd>Familierechtbank Leuven</dd>
+            </div>
+            <div>
+              <dt>Werkgebied</dt>
+              <dd>Leuven en Vlaams-Brabant</dd>
+            </div>
+          </dl>
         </div>
       </section>
 
-      <section class="band" data-parallax>
+      <section class="band">
         <div class="band__bg" aria-hidden="true">
-          <img src="assets/img/licht.jpg" srcset="assets/img/licht-800.jpg 800w, assets/img/licht.jpg 1600w"
+          <img src="assets/img/gerechtshal.jpg" srcset="assets/img/gerechtshal-800.jpg 800w, assets/img/gerechtshal.jpg 1600w"
                sizes="100vw" alt="" width="1600" height="685" loading="lazy" decoding="async">
         </div>
         <div class="shell">
-          <figure class="pull-quote reveal">
-            <div class="arch-divider" aria-hidden="true"></div>
+          <figure class="pull-quote">
             <blockquote>
               <span class="tbc">Ik kan niet beloven dat het makkelijk wordt.
               Wel dat u het niet alleen hoeft te doen.</span>
@@ -182,13 +181,15 @@ priority: 1.0
       </section>
 
       <section class="feature">
-        <div class="feature__media media">
-          <img src="assets/img/weg.jpg" alt="" width="900" height="1200" loading="lazy" decoding="async">
+        <div class="feature__media">
+          <img src="assets/img/begijnhof.jpg" srcset="assets/img/begijnhof-700.jpg 700w, assets/img/begijnhof.jpg 900w"
+               sizes="(max-width: 980px) 100vw, 40vw"
+               alt="Een stille straat in het Groot Begijnhof te Leuven" width="900" height="1200" loading="lazy" decoding="async">
         </div>
-        <div class="feature__body reveal">
+        <div class="feature__body">
           <p class="eyebrow">Bemiddeling</p>
           <h2>Niet elk conflict hoort thuis in een rechtszaal</h2>
-          <p style="margin-top:1.5rem">
+          <p style="margin-top:var(--s5)">
             Een vonnis wijst iemand aan die gelijk krijgt. Dat beslecht een geschil,
             maar het herstelt zelden een verhouding. En als u samen kinderen heeft,
             blijft die verhouding nog jaren bestaan. Op verjaardagen, op oudercontacten,
@@ -213,26 +214,37 @@ priority: 1.0
           <div class="btn-row">
             <a class="btn btn--ghost" href="bemiddeling.html">Hoe bemiddeling werkt</a>
           </div>
+
+          <dl class="dossier">
+            <div>
+              <dt>Erkenning</dt>
+              <dd><span class="tbc">Federale Bemiddelingscommissie</span></dd>
+            </div>
+            <div>
+              <dt>Doorlooptijd</dt>
+              <dd><span class="tbc">Drie tot zes gesprekken</span></dd>
+            </div>
+          </dl>
         </div>
       </section>
 
       <section class="section">
         <div class="shell process">
-          <div class="process__aside reveal">
+          <div class="process__aside">
             <p class="eyebrow">Werkwijze</p>
             <h2>Hoe een dossier bij mij verloopt</h2>
-            <p style="margin-top:1.5rem">
+            <p style="margin-top:var(--s5)">
               Geen enkel dossier is hetzelfde, maar de weg erdoorheen wel. Zo weet u van
               bij het begin wat er komt, wat het kost en wanneer u van mij hoort.
             </p>
-            <div class="media media--soft">
-              <img src="assets/img/pad.jpg" srcset="assets/img/pad-700.jpg 700w, assets/img/pad.jpg 1100w"
-                   sizes="(max-width: 62rem) 90vw, 28vw"
-                   alt="" width="1100" height="687" loading="lazy" decoding="async">
+            <div class="media media--34">
+              <img src="assets/img/gerechtsgebouw.jpg" srcset="assets/img/gerechtsgebouw-700.jpg 700w, assets/img/gerechtsgebouw.jpg 900w"
+                   sizes="(max-width: 900px) 100vw, 30vw"
+                   alt="Het gerechtsgebouw van Leuven aan het Ferdinand Smoldersplein" width="900" height="1200" loading="lazy" decoding="async">
             </div>
           </div>
 
-          <ol class="timeline reveal">
+          <ol class="timeline">
             <li>
               <h3>Eerste gesprek</h3>
               <p>
@@ -303,12 +315,12 @@ priority: 1.0
         </div>
       </section>
 
-      <section class="section section--tight section--bone-deep">
-        <div class="shell split split--reverse">
-          <div class="reveal">
+      <section class="section section--linen">
+        <div class="shell split">
+          <div class="split__sticky">
             <p class="eyebrow">Kosten</p>
             <h2>Vooraf weten waar u aan toe bent</h2>
-            <p class="lede" style="margin-top:1.5rem">
+            <p class="lede" style="margin-top:var(--s5)">
               Onzekerheid over de rekening houdt mensen tegen om hulp te zoeken. Daarom
               bespreek ik het ereloon in het eerste gesprek, niet in een brief achteraf.
             </p>
@@ -323,10 +335,11 @@ priority: 1.0
               <a class="link-arrow" href="tarieven.html">Erelonen en kosten</a>
             </div>
           </div>
-          <div class="split__aside reveal">
+
+          <div class="split__aside">
             <div class="aside-panel">
               <h3>Wat u mag verwachten</h3>
-              <ul class="checklist" style="margin-top:0.5rem">
+              <ul class="checklist" style="margin-top:var(--s4)">
                 <li>Een antwoord binnen <span class="tbc">twee werkdagen</span></li>
                 <li>Een schriftelijke afspraak over het ereloon</li>
                 <li>Kopie van alle stukken in uw dossier</li>
@@ -334,6 +347,94 @@ priority: 1.0
                 <li>Beroepsgeheim, zonder uitzondering</li>
               </ul>
             </div>
+
+            <dl class="dossier">
+              <div>
+                <dt>Eerste gesprek</dt>
+                <dd><span class="tbc">€ 90, inclusief btw</span></dd>
+              </div>
+              <div>
+                <dt>Ereloon</dt>
+                <dd><span class="tbc">€ 125 per uur, exclusief btw</span></dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="shell">
+          <div class="section-head">
+            <p class="eyebrow">Veelgestelde vragen</p>
+            <h2>Wat mensen meestal eerst willen weten</h2>
+          </div>
+
+          <div class="faq">
+            <details>
+              <summary>Komt mijn rechtsbijstandsverzekering tussen?</summary>
+              <div>
+                <p>
+                  Vaak wel, zonder dat mensen het beseffen. Rechtsbijstand zit meestal
+                  gekoppeld aan de woningpolis, de autoverzekering of de familiale. Ze
+                  dekt in bepaalde zaken het ereloon van uw advocaat, en u kiest zelf
+                  wie dat is. Breng uw polis mee naar het eerste gesprek. Ik kijk na of
+                  ze tussenkomt en doe de aangifte.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>Kan ik een advocaat krijgen als ik het niet kan betalen?</summary>
+              <div>
+                <p>
+                  Ligt uw inkomen onder de wettelijke grens, dan heeft u recht op
+                  juridische tweedelijnsbijstand: een advocaat die volledig of
+                  gedeeltelijk door de overheid wordt vergoed. Dat recht wordt vermoed
+                  voor onder meer leefloners, mensen met een IGO of een
+                  inkomensvervangende tegemoetkoming, en voor minderjarigen. De aanvraag
+                  loopt via het Bureau voor Juridische Bijstand bij de balie. Ik zeg u in
+                  het eerste gesprek of u waarschijnlijk in aanmerking komt.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>Wat breng ik mee naar het eerste gesprek?</summary>
+              <div>
+                <p>
+                  Uw identiteitskaart, en verder alles wat met de zaak te maken heeft:
+                  briefwisseling, eerdere vonnissen of overeenkomsten, recente
+                  loonfiches en het laatste aanslagbiljet. Bij familiezaken ook de
+                  huwelijksakte of het samenlevingscontract en de geboorteakten van de
+                  kinderen. Heeft u niet alles bij de hand, kom dan toch. We beginnen met
+                  wat er is.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>Hoe lang duurt een procedure?</summary>
+              <div>
+                <p>
+                  Dat verschilt sterk. Een echtscheiding door onderlinge toestemming kan
+                  in enkele maanden rond zijn wanneer u het samen eens raakt. Een
+                  betwiste procedure voor de familierechtbank loopt vaak een jaar of
+                  langer, zeker wanneer er een deskundige of een sociaal onderzoek aan te
+                  pas komt. In het eerste gesprek geef ik u een realistische inschatting
+                  voor uw eigen zaak, geen gemiddelde.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>Wat kost bemiddeling?</summary>
+              <div>
+                <p>
+                  Bemiddeling wordt per uur aangerekend en u deelt die kosten met de
+                  andere partij. Daardoor ligt de rekening per persoon in de regel lager
+                  dan bij twee afzonderlijke advocaten die tegen elkaar procederen. Het
+                  kennismakingsgesprek verplicht u tot niets.
+                  <span class="tbc">Het uurtarief bedraagt € 125, te delen tussen de
+                  partijen.</span>
+                </p>
+              </div>
+            </details>
           </div>
         </div>
       </section>
