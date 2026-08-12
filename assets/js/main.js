@@ -58,8 +58,54 @@
     });
   }
 
-  /* ---- 3. Rustig in beeld schuiven ------------------------------------- */
-  var targets = document.querySelectorAll('.reveal');
+  /* ---- 3. Beeldband met lichte parallax --------------------------------- */
+  var bands = document.querySelectorAll('[data-parallax]');
+  if (bands.length && !reduced && 'IntersectionObserver' in window) {
+    var actief = [];
+    var bandObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            if (actief.indexOf(entry.target) === -1) actief.push(entry.target);
+          } else {
+            actief = actief.filter(function (b) { return b !== entry.target; });
+          }
+        });
+      },
+      { rootMargin: '10% 0px' }
+    );
+    Array.prototype.forEach.call(bands, function (b) { bandObserver.observe(b); });
+
+    var bezig = false;
+    var verschuif = function () {
+      actief.forEach(function (band) {
+        var bg = band.querySelector('.band__bg');
+        if (!bg) return;
+        var rect = band.getBoundingClientRect();
+        var midden = rect.top + rect.height / 2 - window.innerHeight / 2;
+        // De foto steekt 12% boven en onder de band uit; verder verschuiven
+        // dan dat zou een gat laten vallen.
+        var grens = rect.height * 0.11;
+        var verzet = Math.max(-grens, Math.min(grens, -midden * 0.06));
+        bg.style.transform = 'translate3d(0,' + verzet.toFixed(1) + 'px,0)';
+      });
+      bezig = false;
+    };
+    window.addEventListener(
+      'scroll',
+      function () {
+        if (!bezig) {
+          window.requestAnimationFrame(verschuif);
+          bezig = true;
+        }
+      },
+      { passive: true }
+    );
+    verschuif();
+  }
+
+  /* ---- 4. Rustig in beeld schuiven ------------------------------------- */
+  var targets = document.querySelectorAll('.reveal, .media');
   if (!targets.length) return;
 
   if (reduced || !('IntersectionObserver' in window)) {

@@ -186,9 +186,26 @@ def main() -> int:
     for name in PAGE_ORDER:
         doc = doc.replace(f'href="{name}"', f'href="#{name.replace(".html", "")}"')
 
+    # srcset en sizes hebben in één bestand geen nut en zouden elk beeld
+    # dubbel insluiten
+    doc = re.sub(r'\s+(?:srcset|sizes)="[^"]*"', "", doc)
+
     # afbeeldingen insluiten
     for img in sorted((ROOT / "assets/img").glob("*.svg")):
         doc = doc.replace(f"assets/img/{img.name}", data_uri(img, "image/svg+xml"))
+
+    # foto's: neem de kleinste beschikbare variant, anders wordt het bestand
+    # onnodig zwaar voor wat een voorbeeld is
+    fotos = sorted((ROOT / "assets/img").glob("*.jpg"))
+    basissen = {p.stem.split("-")[0] for p in fotos}
+    for basis in sorted(basissen):
+        varianten = sorted(
+            (p for p in fotos if p.stem.split("-")[0] == basis),
+            key=lambda p: p.stat().st_size,
+        )
+        uri = data_uri(varianten[0], "image/jpeg")
+        for p in varianten:
+            doc = doc.replace(f"assets/img/{p.name}", uri)
 
     js = (ROOT / "assets/js/main.js").read_text(encoding="utf-8")
 

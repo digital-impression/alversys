@@ -83,10 +83,16 @@ Dit is het grootste openstaande punt voor de uitstraling.
 - **Portretfoto** — staand, 4:5, in natuurlijk licht, rustige achtergrond.
   Dit is het beeld waarop het hele ontwerp steunt. Vervang
   `assets/img/portret-placeholder.svg` door `assets/img/portret.jpg`.
-- Optioneel: twee of drie sfeerbeelden van het kantoor of van de
-  gespreksruimte, voor de pagina's Over mij en Contact.
-- Voorlopig staat er een neutrale, opzettelijk abstracte opvulling. Die is
-  bruikbaar om te presenteren, maar niet om mee online te gaan.
+- **Vier sfeerbeelden** die de site nu draagt (`gang`, `bibliotheek`,
+  `trap`, `doorgang`, `gewelf`) zijn **tijdelijk**. Ze komen van Wikimedia
+  Commons en zijn in de huisstijl bewerkt zodat ze als één geheel lezen.
+  Zolang ze er staan, moet de naamsvermelding op `juridische-informatie.html`
+  blijven staan (CC BY-SA). Vervangen we ze door eigen foto's, dan vervalt dat.
+- Wat we in de plaats het liefst krijgen: het kantoor of de gespreksruimte,
+  een detail van haar bureau, en desnoods een sfeerbeeld van Leuven.
+- Nieuwe foto's krijgen dezelfde behandeling met
+  `python3 tools/beeld.py foto.jpg naam 4:5 1100`, zodat ze meteen in de
+  huisstijl passen.
 
 ## 6. Praktische werking
 

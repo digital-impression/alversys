@@ -87,21 +87,27 @@ JSON_LD = """{
 }""" % SITE
 
 CTA_BLOCK = """
-      <section class="section section--forest cta">
-        <div class="shell">
-          <div class="cta__inner">
-            <div class="reveal">
-              <p class="eyebrow">Kennismaken</p>
-              <h2>Uw situatie rustig bespreken, voor u iets beslist</h2>
-              <p>
-                Een eerste gesprek dient om te luisteren. U vertelt wat er speelt, ik
-                schets welke wegen openstaan en wat elk daarvan realistisch betekent —
-                in tijd, in kosten en voor de mensen om u heen.
-              </p>
-            </div>
-            <div class="btn-row reveal" style="margin-top:0">
-              <a class="btn btn--ghost" href="contact.html">Een afspraak vragen</a>
+      <section class="closer">
+        <div class="shell closer__grid">
+          <div class="reveal">
+            <p class="eyebrow">Kennismaken</p>
+            <h2>Uw situatie rustig bespreken, voor u iets beslist</h2>
+            <p>
+              Een eerste gesprek dient om te luisteren. U vertelt wat er speelt, ik
+              schets welke wegen openstaan en wat elk daarvan realistisch betekent —
+              in tijd, in kosten en voor de mensen om u heen. Pas daarna beslist u
+              of u verdergaat.
+            </p>
+            <div class="btn-row">
+              <a class="btn" href="contact.html">Een afspraak vragen</a>
               <a class="btn btn--ghost" href="tel:{tel_href}">{tel_display}</a>
+            </div>
+          </div>
+          <div class="reveal">
+            <div class="media media--arch framed">
+              <img src="assets/img/gewelf.jpg" srcset="assets/img/gewelf-800.jpg 800w, assets/img/gewelf.jpg 1400w"
+                   sizes="(max-width: 62rem) 0px, 30vw"
+                   alt="" width="1400" height="787" loading="lazy" decoding="async">
             </div>
           </div>
         </div>
@@ -141,6 +147,17 @@ SHELL = """<!doctype html>
 </head>
 <body>
 <a class="skip-link" href="#hoofdinhoud">Naar de hoofdinhoud</a>
+
+<div class="topbar">
+  <div class="shell topbar__inner">
+    <ul>
+      <li>{street}, {postcode} {city}</li>
+      <li><a href="tel:{tel_href}">{tel_display}</a></li>
+      <li><a href="mailto:{email}">{email}</a></li>
+    </ul>
+    <span class="topbar__note">Enkel op afspraak &middot; Balie Leuven</span>
+  </div>
+</div>
 
 <header class="site-header">
   <div class="shell site-header__inner">
