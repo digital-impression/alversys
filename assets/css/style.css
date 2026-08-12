@@ -336,10 +336,12 @@ hr {
   background: var(--clay-soft);
 }
 
+/* Duidelijke trappen in de tekst: inleiding donker, lopende tekst zachter,
+   bijschriften het lichtst. Zo weet het oog waar het begint. */
 .lede {
   font-size: var(--step-1);
   line-height: 1.55;
-  color: var(--ink-soft);
+  color: var(--ink);
   max-width: 44ch;
 }
 
@@ -779,25 +781,23 @@ hr {
    9. Sectiekop
    -------------------------------------------------------------------------- */
 
+/* Eén ingang per sectie: eerst de kop, daaronder de toelichting. Twee
+   kolommen naast elkaar lieten het oog twijfelen waar te beginnen. */
 .section-head {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: clamp(1.5rem, 4vw, 4rem);
-  align-items: end;
+  max-width: 46rem;
   margin-bottom: var(--space-block);
 }
-.section-head--single {
-  grid-template-columns: 1fr;
-  max-width: 52rem;
+.section-head h2 {
+  max-width: 18ch;
+}
+.section-head__text {
+  margin-top: 1.35rem;
 }
 .section-head__text p {
   margin-bottom: 0;
-}
-@media (max-width: 55rem) {
-  .section-head {
-    grid-template-columns: 1fr;
-    align-items: start;
-  }
+  max-width: 54ch;
+  font-size: var(--step-0);
+  color: var(--ink-soft);
 }
 
 /* --------------------------------------------------------------------------
@@ -857,21 +857,32 @@ hr {
   margin: 0;
   max-width: 46ch;
 }
+/* De pijl staat er altijd: een rij die klikbaar is, moet er klikbaar
+   uitzien, ook zonder dat de muis erover gaat. */
 .domain__go {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
   font-size: var(--step--2);
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--clay-deep);
   font-weight: 600;
   white-space: nowrap;
-  opacity: 0;
-  transform: translateX(-0.5rem);
-  transition: opacity 0.35s var(--ease), transform 0.35s var(--ease);
+  transition: gap 0.3s var(--ease), color 0.3s var(--ease);
 }
-.domain:hover .domain__go,
-.domain:focus-visible .domain__go {
-  opacity: 1;
-  transform: translateX(0);
+.domain__go::after {
+  content: '';
+  width: 1.6rem;
+  height: 1px;
+  background: currentColor;
+  transition: width 0.3s var(--ease);
+}
+.domain:hover .domain__go {
+  color: var(--forest);
+}
+.domain:hover .domain__go::after {
+  width: 2.4rem;
 }
 @media (max-width: 60rem) {
   .domain {
@@ -883,8 +894,6 @@ hr {
   }
   .domain__go {
     grid-column: 2;
-    opacity: 1;
-    transform: none;
   }
 }
 
@@ -1707,7 +1716,7 @@ hr {
   max-width: 48ch;
 }
 .closer .media {
-  aspect-ratio: 5 / 4;
+  aspect-ratio: 4 / 5;
   border-radius: 999px 999px var(--radius-m) var(--radius-m);
 }
 @media (max-width: 62rem) {

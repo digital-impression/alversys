@@ -27,11 +27,11 @@ vervangen te worden door eigen beeldmateriaal — zie `INHOUD-TODO.md`.
 
 | Bestand | Origineel | Auteur | Licentie |
 |---|---|---|---|
-| `gang.jpg` | [Duke Humfrey's Library Interior 5](https://commons.wikimedia.org/wiki/File:Duke_Humfrey%27s_Library_Interior_5,_Bodleian_Library,_Oxford,_UK_-_Diliff.jpg) | Diliff | CC BY-SA 3.0 |
-| `bibliotheek.jpg` | [Duke Humfrey's Library Interior 6](https://commons.wikimedia.org/wiki/File:Duke_Humfrey%27s_Library_Interior_6,_Bodleian_Library,_Oxford,_UK_-_Diliff.jpg) | Diliff | CC BY-SA 3.0 |
-| `trap.jpg` | [Säppi majakka](https://commons.wikimedia.org/wiki/File:S%C3%A4ppi_majakka.jpg) | kallerna | CC BY-SA 3.0 |
-| `doorgang.jpg` | [Underground city in Nushabad](https://commons.wikimedia.org/wiki/File:Underground_city_in_Nushabad,_Kashan,_Iran3.jpg) | Amirpashaei | CC BY-SA 4.0 |
-| `gewelf.jpg` | [Escalier spirale voûte château de l'Herm](https://commons.wikimedia.org/wiki/File:Escalier_spirale_vo%C3%BBte_ch%C3%A2teau_de_l%27Herm.jpg) | Jebulon | CC0 |
+| `begijnhof.jpg` | [Middenstraat, Groot Begijnhof of Leuven](https://commons.wikimedia.org/wiki/File:Middenstraat,_Groot_Begijnhof_of_Leuven_(DSCF0911).jpg) | Trougnouf (Benoit Brummer) | CC BY 4.0 |
+| `weg.jpg` | [Groot Begijnhof in Leuven (2)](https://commons.wikimedia.org/wiki/File:Groot_Begijnhof_in_Leuven_(2).jpg) | Krzysztof Golik | CC BY-SA 4.0 |
+| `gevel.jpg` | [Groot Begijnhof in Leuven (3)](https://commons.wikimedia.org/wiki/File:Groot_Begijnhof_in_Leuven_(3).jpg) | Krzysztof Golik | CC BY-SA 4.0 |
+| `licht.jpg` | [Dülmen, Börnste, Waldweg](https://commons.wikimedia.org/wiki/File:D%C3%BClmen,_B%C3%B6rnste,_Waldweg_--_2024_--_6257.jpg) | Dietmar Rabich | CC BY-SA 4.0 |
+| `pad.jpg` | [Prospect Park November 2016](https://commons.wikimedia.org/wiki/File:Prospect_Park_New_York_November_2016_001.jpg) | King of Hearts | CC BY-SA 4.0 |
 
 **Let op:** CC BY-SA verplicht tot naamsvermelding én verspreiding van de
 bewerking onder dezelfde licentie. Zolang deze foto's op de site staan, moet

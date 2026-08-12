@@ -83,8 +83,9 @@ Dit is het grootste openstaande punt voor de uitstraling.
 - **Portretfoto** — staand, 4:5, in natuurlijk licht, rustige achtergrond.
   Dit is het beeld waarop het hele ontwerp steunt. Vervang
   `assets/img/portret-placeholder.svg` door `assets/img/portret.jpg`.
-- **Vier sfeerbeelden** die de site nu draagt (`gang`, `bibliotheek`,
-  `trap`, `doorgang`, `gewelf`) zijn **tijdelijk**. Ze komen van Wikimedia
+- **Vijf sfeerbeelden** die de site nu draagt (`begijnhof`, `weg`, `gevel`,
+  `licht`, `pad`) zijn **tijdelijk**. Drie ervan tonen het Groot Begijnhof
+  in Leuven, wat de praktijk meteen lokaal verankert. Ze komen van Wikimedia
   Commons en zijn in de huisstijl bewerkt zodat ze als één geheel lezen.
   Zolang ze er staan, moet de naamsvermelding op `juridische-informatie.html`
   blijven staan (CC BY-SA). Vervangen we ze door eigen foto's, dan vervalt dat.

@@ -26,7 +26,7 @@ PAGES = ROOT / "pages"
 
 # --------------------------------------------------------------------------
 # Vaste gegevens van het kantoor.
-# Wijzig hier — het wordt overal op de site doorgevoerd.
+# Wijzig hier, dan wordt het overal op de site doorgevoerd.
 # --------------------------------------------------------------------------
 
 SITE = {
@@ -94,7 +94,7 @@ CTA_BLOCK = """
             <h2>Uw situatie rustig bespreken, voor u iets beslist</h2>
             <p>
               Een eerste gesprek dient om te luisteren. U vertelt wat er speelt, ik
-              schets welke wegen openstaan en wat elk daarvan realistisch betekent —
+              schets welke wegen openstaan en wat elk daarvan realistisch betekent:
               in tijd, in kosten en voor de mensen om u heen. Pas daarna beslist u
               of u verdergaat.
             </p>
@@ -105,9 +105,9 @@ CTA_BLOCK = """
           </div>
           <div class="reveal">
             <div class="media media--arch framed">
-              <img src="assets/img/gewelf.jpg" srcset="assets/img/gewelf-800.jpg 800w, assets/img/gewelf.jpg 1400w"
-                   sizes="(max-width: 62rem) 0px, 30vw"
-                   alt="" width="1400" height="787" loading="lazy" decoding="async">
+              <img src="assets/img/gevel.jpg" srcset="assets/img/gevel-700.jpg 700w, assets/img/gevel.jpg 1000w"
+                   sizes="(max-width: 62rem) 0px, 28vw"
+                   alt="" width="1000" height="1250" loading="lazy" decoding="async">
             </div>
           </div>
         </div>
@@ -127,7 +127,7 @@ SHELL = """<!doctype html>
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="nl_BE">
-<meta property="og:site_name" content="{name} — {role}">
+<meta property="og:site_name" content="{name}, {role}">
 <meta property="og:title" content="{og_title}">
 <meta property="og:description" content="{description}">
 <meta property="og:url" content="{base_url}/{slug}">
@@ -220,7 +220,7 @@ SHELL = """<!doctype html>
     </div>
 
     <div class="site-footer__bottom">
-      <p>&copy; {year} Veerle Borremans — Advocaat te Leuven</p>
+      <p>&copy; {year} Veerle Borremans, advocaat te Leuven</p>
       <nav aria-label="Juridische informatie">
         <a href="juridische-informatie.html">Juridische informatie</a>
         <a href="privacybeleid.html">Privacybeleid</a>
@@ -337,7 +337,7 @@ def main() -> int:
     if openstaand:
         print(
             f"\n  ! {openstaand} plaatsen wachten nog op bevestiging door de cliënte."
-            "\n    Zoek op 'tbc' in pages/ — zie INHOUD-TODO.md."
+            "\n    Zoek op 'tbc' in pages/, zie INHOUD-TODO.md."
         )
     return 0
 

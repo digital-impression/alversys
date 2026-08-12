@@ -25,9 +25,9 @@ from PIL import Image, ImageEnhance, ImageFilter, ImageOps
 ROOT = Path(__file__).resolve().parent.parent
 UIT = ROOT / "assets/img"
 
-SCHADUW = (26, 36, 31)
-MIDDEN = (122, 108, 92)
-HOOGLICHT = (243, 235, 224)
+SCHADUW = (33, 43, 37)
+MIDDEN = (132, 114, 94)
+HOOGLICHT = (248, 241, 231)
 
 
 def kleurtrap() -> list[int]:
@@ -49,7 +49,7 @@ def kleurtrap() -> list[int]:
 TRAP = kleurtrap()
 
 
-def korrel(afbeelding: Image.Image, sterkte: int = 6) -> Image.Image:
+def korrel(afbeelding: Image.Image, sterkte: int = 5) -> Image.Image:
     ruis = Image.new("L", afbeelding.size)
     ruis.frombytes(
         bytes(bytearray(random.getrandbits(8) for _ in range(afbeelding.size[0] * afbeelding.size[1])))
@@ -58,7 +58,7 @@ def korrel(afbeelding: Image.Image, sterkte: int = 6) -> Image.Image:
     return Image.blend(afbeelding, Image.merge("RGB", (ruis, ruis, ruis)), sterkte / 100)
 
 
-def verwerk(bron: Path, naam: str, verhouding: float, breedte: int, kleurbehoud: float = 0.18) -> None:
+def verwerk(bron: Path, naam: str, verhouding: float, breedte: int, kleurbehoud: float = 0.45) -> None:
     im = Image.open(bron).convert("RGB")
 
     b, h = im.size
