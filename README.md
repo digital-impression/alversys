@@ -63,6 +63,40 @@ for this site from that one vocabulary (line plus diamond); they are not stock.
 
 ---
 
+## De herbouw — `jacobs-law.html`
+
+Op basis van de redesign-brief is de site herbouwd als **één zelfstandig HTML-bestand**
+met inline CSS en JS: `jacobs-law.html` (0,9 MB, geen enkele externe request —
+lettertypes, foto's, iconen en de kaart zitten er allemaal in).
+
+Gebouwd uit `tools/page.html` + `tools/assemble.py`:
+
+```bash
+python3 tools/assemble.py     # vult lettertypes, beelden en iconen in
+```
+
+**Wat er anders is dan het palet in de brief.** Het palet had geen goudtint die als
+kleine tekst op licht AA haalt — `--gold #B4873C` komt op crème niet verder dan
+**2,98:1**, dus zelfs de 3:1 voor grote tekst niet. Als vlak/fill is dat precies goed
+en zo is het ook gebruikt; voor eyebrows en kleine tekst op licht is er
+`--gold-deep #83622C` bijgekomen: zelfde tint (37°), 5,15:1 op crème en 4,56:1 op zand.
+
+**Het grid.** De tweede kolom start in élke tweekolomsectie op dezelfde x — hero,
+alle inhoudssecties en de footer, gemeten op 732px bij een viewport van 1440.
+Gelijke paren gebruiken 1–6 / 7–12, asymmetrische 1–5 / 7–12; in beide gevallen
+begint de rechterkolom op kolom 7.
+
+**Gecontroleerd:** 1 h1, geen overgeslagen kopniveaus, alle alt-teksten, geen
+horizontale overflow op 360–1920px, alle tekst haalt WCAG AA gemeten op de
+*gerenderde* stijlen, focus 2px goud met 3px offset, accordeon één tegelijk open,
+`prefers-reduced-motion` schakelt alles uit, geen console-fouten.
+
+**Nog te doen als de subpagina's blijven.** De elf losse pagina's hieronder hebben
+het oude systeem nog. De one-pager vervangt de startpagina; wil je de subpagina's
+behouden, dan moeten die hetzelfde palet, grid en typeschaal krijgen.
+
+---
+
 ## Structure
 
 ```
